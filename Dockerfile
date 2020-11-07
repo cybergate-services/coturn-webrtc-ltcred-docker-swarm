@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-MAINTAINER BChinthaka Deshapriya <chinthaka@cybergate.lk>
+MAINTAINER Chinthaka Deshapriya <chinthaka@cybergate.lk>
 
 RUN apt-get update && apt-get install -y coturn && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
