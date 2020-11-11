@@ -8,7 +8,10 @@ ENV TURN_PORT_START 10000
 ENV TURN_PORT_END 20000
 ENV TURN_SECRET mysecret
 ENV TURN_SERVER_NAME coturn
-ENV TURN_REALM north.gov
+ENV TURN_REALM teams.cyber.lk
+ENV ALTERNATE-SERVER1=coturn1.teams.cyber.lk
+ENV ALTERNATE-SERVER3=coturn1.teams.cyber.lk
+ENV ALTERNATE-SERVER1=coturn1.teams.cyber.lk
 
 ADD start_coturn.sh start_coturn.sh
 RUN chmod +x start_coturn.sh
