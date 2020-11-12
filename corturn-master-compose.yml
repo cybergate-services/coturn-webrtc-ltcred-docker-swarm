@@ -1,0 +1,7 @@
+version: "3.3"
+services:
+  coturn-master:
+    image: 127.0.0.1:5000/coturn-master
+    build:
+      context: ./
+      dockerfile: ./Dockerfile.master.yml
