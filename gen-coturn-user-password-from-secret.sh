@@ -1,5 +1,5 @@
 #!/bin/bash
-secret=cybersecret && \
+secret=mysecret && \
 time=$(date +%s) && \
 expiry=8400 && \
 username=$(( $time + $expiry )) &&\
