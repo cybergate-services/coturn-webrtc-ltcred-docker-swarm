@@ -7,7 +7,7 @@ turnserver -a -v -L 0.0.0.0 --server-name "${TURN_SERVER_NAME}"  \
 -p ${TURN_PORT} \
 --min-port ${TURN_PORT_START} \
 --max-port ${TURN_PORT_END} \
---alternate-server ${ALTERNATE-SERVER1} \
---alternate-server ${ALTERNATE-SERVER1} \
---alternate-server ${ALTERNATE-SERVER1}
+--alternate-server ${ALTERNATE_SERVER1} \
+--alternate-server ${ALTERNATE_SERVER2} \
+--alternate-server ${ALTERNATE_SERVER3}
 

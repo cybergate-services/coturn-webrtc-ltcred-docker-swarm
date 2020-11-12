@@ -2,9 +2,6 @@ version: '3.7'
 services:
   coturn:
     image: '127.0.0.1:5000/coturn-master'
-    ports:
-      - "3478:3478/udp" 
-      - "3478:3478/tcp"
     environment:
       - TURN_PORT=3478
       - TURN_PORT_START=10000
@@ -12,20 +9,17 @@ services:
       - TURN_SECRET=mysecret
       - TURN_SERVER_NAME=coturn
       - TURN_REALM=teams.cyber.lk
-      - ALTERNATE-SERVER1=coturn1.teams.cyber.lk
-      - ALTERNATE-SERVER3=coturn2.teams.cyber.lk
-      - ALTERNATE-SERVER1=coturn3.teams.cyber.lk
+      - ALTERNATE_SERVER1=62.210.172.198
+      - ALTERNATE_SERVER3=62.210.140.169
+      - ALTERNATE_SERVER1=62.210.127.176
     deploy:
       placement:
         constraints:
           - node.hostname == node4          
-     networks:
+    networks:
       - host
   coturn1:
     image: '127.0.0.1:5000/coturn-slave'
-    ports:
-      - "3478:3478/udp" 
-      - "3478:3478/tcp"
     environment:
       - TURN_PORT=3478
       - TURN_PORT_START=10000
@@ -37,13 +31,10 @@ services:
       placement:
         constraints:
           - node.hostname == node1          
-     networks:
+    networks:
       - host
   coturn2:
     image: '127.0.0.1:5000/coturn-slave'
-    ports:
-      - "3478:3478/udp" 
-      - "3478:3478/tcp"
     environment:
       - TURN_PORT=3478
       - TURN_PORT_START=10000
@@ -55,13 +46,10 @@ services:
       placement:
         constraints:
           - node.hostname == node2          
-     networks:
+    networks:
       - host
   coturn3:
     image: '127.0.0.1:5000/coturn-slave'
-    ports:
-      - "3478:3478/udp" 
-      - "3478:3478/tcp"
     environment:
       - TURN_PORT=3478
       - TURN_PORT_START=10000
@@ -73,7 +61,7 @@ services:
       placement:
         constraints:
           - node.hostname == node3          
-     networks:
+    networks:
       - host 
   
 networks:

@@ -1,4 +1,3 @@
-
 FROM ubuntu:18.04
 MAINTAINER Chinthaka Deshapriya <chinthaka@cybergate.lk>
 
