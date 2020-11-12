@@ -13,7 +13,7 @@ ENV ALTERNATE-SERVER1=coturn1.teams.cyber.lk
 ENV ALTERNATE-SERVER3=coturn1.teams.cyber.lk
 ENV ALTERNATE-SERVER1=coturn1.teams.cyber.lk
 
-ADD start_coturn.sh start_coturn.sh
+ADD start_coturn_master.sh start_coturn.sh
 RUN chmod +x start_coturn.sh
 
 CMD ["./start_coturn.sh"]
